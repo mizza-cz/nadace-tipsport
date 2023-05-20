@@ -1,0 +1,16 @@
+.link {
+  background-color: var(--color-secondary);
+  border-radius: 100px;
+  font-weight: 500;
+  font-feature-settings: "pnum" on, "lnum" on, "zero" on;
+  color: var(--color-dark);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-decoration: none;
+  transition: var(--transition);
+  padding: 10px 25px;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

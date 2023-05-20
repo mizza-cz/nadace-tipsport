@@ -1,0 +1,41 @@
+.hp-list {
+  margin-bottom: 54px;
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 20px;
+  }
+  &__item {
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto 66px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 48px;
+    }
+  }
+  .h4 {
+    margin-bottom: 8px;
+    color: var(--color-primary);
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+  p {
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    svg,
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+    }
+  }
+}
