@@ -1,0 +1,10 @@
+.tag {
+  background: rgba(228, 228, 227, 0.96);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  font-feature-settings: "pnum" on, "lnum" on, "zero" on;
+  padding: 5px 8px 4px;
+  color: var(--color-dark);
+  text-decoration: none;
+}
