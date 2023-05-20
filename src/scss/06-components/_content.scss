@@ -16,6 +16,7 @@
 .h1 {
   font-size: 64px;
   line-height: 72px;
+  font-weight: 750;
   @include media-breakpoint-down(md) {
     font-size: 40px;
     line-height: 55px;
@@ -38,4 +39,10 @@
 .o-content h4 {
   font-size: 24px;
   line-height: 37px;
+}
+.h5,
+.o-content h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
 }
