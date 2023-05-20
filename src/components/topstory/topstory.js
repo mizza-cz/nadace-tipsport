@@ -5,7 +5,7 @@ $(".topstory__inner").slick({
   autoplay: true,
   infinite: true,
   prevArrow:
-    '<button class="slider__btn slider__btnprev"><img src="../images/ico/left.svg" alt="" ></button> ',
+    '<button class="slider__btn slider__btnprev"><img src="./images/ico/left.svg" alt="" ></button> ',
   nextArrow:
-    ' <button class="slider__btn  slider__btnnext"><img src="../images/ico/right.svg" alt = "" ></button>',
+    ' <button class="slider__btn  slider__btnnext"><img src="./images/ico/right.svg" alt = "" ></button>',
 });
