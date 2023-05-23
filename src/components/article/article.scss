@@ -35,6 +35,8 @@
       height: 356px;
       @include media-breakpoint-down(lg) {
         height: auto;
+        aspect-ratio: 343/280;
+        grid-column: span 2;
       }
     }
     li:last-child {
@@ -62,6 +64,7 @@
       height: 158px;
       @include media-breakpoint-down(lg) {
         height: auto;
+        aspect-ratio: 164/158;
       }
       a {
         width: 100%;
