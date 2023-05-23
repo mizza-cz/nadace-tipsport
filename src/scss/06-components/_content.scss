@@ -1,12 +1,94 @@
 .o-content {
+  img {
+    margin: 40px 0;
+    display: block;
+    height: auto;
+  }
+  ul {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.45px;
+    margin-bottom: 48px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 32px;
+    }
+
+    > li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      &::before {
+        content: "";
+        background-image: url("../images/ico/list.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 12px;
+        height: 10px;
+      }
+      > ul {
+        margin: 16px 0 0;
+        > li {
+          &::before {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  ol {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
+    counter-reset: item;
+    letter-spacing: 0.45px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 32px;
+    }
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 16px;
+      &::before {
+        content: counter(item) ")";
+        color: #c4c4c4;
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      > ol {
+        margin: 16px 0 0;
+        > li {
+          &::before {
+            content: counter(item) ".";
+          }
+        }
+      }
+    }
+  }
   .perex {
     margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+  h4 {
+    margin-bottom: 16px;
+    margin-top: 40px;
+    color: var(--color-secondary);
+    @include media-breakpoint-down(md) {
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
   }
   p {
     margin-bottom: 16px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.6rem;
+    letter-spacing: 0.45px;
   }
   &::after {
     display: table;
@@ -37,6 +119,8 @@
   font-size: 48px;
   line-height: 73px;
   @include media-breakpoint-down(md) {
+    font-size: 32px;
+    line-height: 125%;
   }
 }
 .h3,
