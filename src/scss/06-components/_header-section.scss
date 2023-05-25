@@ -1,0 +1,106 @@
+.header-section {
+  background-color: var(--color-secondary);
+  padding: 44px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 32px 0 24px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-left: -12px;
+    margin-right: -12px;
+    flex-wrap: wrap;
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__form {
+    display: block;
+  }
+  &__label {
+    padding: 0 12px;
+    display: block;
+    margin-bottom: 16px;
+
+    @include media-breakpoint-only(sm) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 8px;
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-only(md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 8px;
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      flex: 100%;
+      max-width: 100%;
+      padding: 0px;
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__btn {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    width: 44px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    img {
+      width: 20px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  &__input {
+    position: relative;
+    height: 36px;
+    max-width: 37rem;
+    width: 36.8rem;
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      max-width: 100%;
+    }
+    input {
+      padding: 0.0625rem 2.375rem 0.125rem 1.5rem;
+      padding-left: 54px;
+      padding-top: 6px;
+      border: 1px solid #92b93c;
+      height: 100%;
+      display: block;
+      letter-spacing: 0.4px;
+      border-radius: 100px;
+      background: rgba(255, 255, 254, 0.4);
+      color: var(--color-dark);
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      &::placeholder {
+        color: var(--color-dark);
+      }
+    }
+  }
+}
