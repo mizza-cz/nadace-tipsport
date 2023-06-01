@@ -88,7 +88,7 @@
         position: absolute;
         top: 100%;
         right: -16px;
-        z-index: 90;
+        z-index: 90000;
         width: 19rem;
         padding: 1rem;
         opacity: 0;
@@ -230,7 +230,7 @@
       right: 16px;
       width: 10px;
       height: 12px;
-      top: 16px;
+      top: 12px;
       background-image: url("../images/ico/drop.svg");
       display: block;
       background-size: contain;
