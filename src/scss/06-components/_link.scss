@@ -10,6 +10,9 @@
   text-decoration: none;
   transition: var(--transition);
   padding: 10px 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
   &:hover {
     background-color: var(--color-blue);
     color: var(--color-light);
