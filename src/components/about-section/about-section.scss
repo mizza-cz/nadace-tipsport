@@ -1,0 +1,223 @@
+.about-section {
+  .h2 {
+    letter-spacing: 1px;
+  }
+  &__content {
+    margin-top: 56px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 24px;
+    }
+  }
+  .aside-archive {
+    margin-top: -108px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
+    }
+    &__img {
+      width: 100%;
+      aspect-ratio: 496/380;
+      display: block;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.about-section__contact {
+  text-align: center;
+  h6 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 2px;
+  }
+  li,
+  a {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    font-feature-settings: "pnum" on, "lnum" on, "zero" on;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  li a {
+    color: var(--color-green-dark);
+    text-decoration-color: transparent;
+    transition: all 0.3s;
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+  &-img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.about-section__price {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  justify-content: center;
+  margin: 155px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 80px 0;
+    margin: 80px 0;
+  }
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    transform: rotate(-189deg);
+    @include media-breakpoint-down(lg) {
+      height: 16px;
+    }
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+}
+.about-section__count {
+  font-weight: 750;
+  font-size: 128px;
+  line-height: 196px;
+  color: var(--color-green-dark);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-feature-settings: "pnum" on, "lnum" on, "zero" on;
+  @include media-breakpoint-only(lg) {
+    font-size: 80px;
+    line-height: 150%;
+  }
+  @include media-breakpoint-only(md) {
+    font-size: 80px;
+    line-height: 150%;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 44px;
+    line-height: 150%;
+  }
+  span {
+    color: var(--color-secondary);
+    padding-right: 40px;
+    font-weight: 750;
+    display: block;
+    @include media-breakpoint-down(lg) {
+      padding-right: 20px;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #897e7e;
+  }
+}
+
+.about-section__timeline {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 0;
+  @include media-breakpoint-down(lg) {
+  }
+}
+
+.timeline-content {
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+}
+
+.timeline-component {
+  padding-top: 2px;
+  margin-bottom: 16px;
+  .h4 {
+    color: var(--color-secondary);
+    position: relative;
+    padding-left: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      background-image: url("../images/ico/history.svg");
+      width: 12px;
+      height: 10px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 24px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .about-section__timeline {
+    margin: 80px auto 40px;
+  }
+  .timeline-component {
+    padding: 0 16px;
+    margin-bottom: 0;
+    .h4 {
+      padding: 0 24px;
+    }
+    p {
+      padding: 0 24px;
+    }
+  }
+  .text-md-right {
+    text-align: right;
+    .h4 {
+      &::before {
+        right: 0;
+        left: auto;
+        top: 15px;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  .about-section__timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    width: 2px;
+    background: #d9d9d9;
+    height: 100%;
+  }
+  .timeline-middle:nth-last-child(1 of .timeline-middle) {
+    padding-bottom: 140px;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+}
