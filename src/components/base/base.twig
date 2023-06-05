@@ -29,7 +29,9 @@
   </head>
   <body>
     <div class="base">
-      {% include "@components/header/header.twig" %}
+      {% if title == "03.0_archive" %} {% include
+        "@components/header/header-dark.twig" %} {% else %} {% include
+        "@components/header/header.twig" %} {% endif %}
       <main class="main" aria-label="Hlavní obsah">
         {% block main %}{% endblock %}
       </main>

@@ -321,3 +321,18 @@
     margin-top: 0;
   }
 }
+
+.header-white {
+  .nav-link {
+    color: var(--color-light) !important;
+    @include media-breakpoint-down(lg) {
+      color: var(--color-dark-gray) !important;
+    }
+  }
+  .dropdown .nav-link:after {
+    background-image: url("../images/ico/drop-white.svg");
+    @include media-breakpoint-down(lg) {
+      background-image: url("../images/ico/drop.svg");
+    }
+  }
+}
