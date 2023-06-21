@@ -36,7 +36,7 @@
   }
 }
 .helps-detail__menu {
-  background-color: var(--color-secondary);
+  background-color: var(--color-light);
   padding: 0;
 }
 .tab {
@@ -46,7 +46,7 @@
   font-feature-settings: "pnum" on, "lnum" on, "zero" on;
   color: var(--color-dark-gray);
   text-decoration: none;
-  border-bottom: 5px solid var(--color-secondary);
+  // border-bottom: 5px solid var(--color-secondary);
   display: block;
   letter-spacing: 0.5px;
   padding-bottom: 7px;
@@ -54,14 +54,13 @@
     padding-bottom: 4px;
     border: none;
     background-color: #fff;
-    border-radius: 8px;
     padding: 6px 16px;
   }
 }
 .tab.active {
-  border-bottom: 5px solid var(--color-light);
+  border-bottom: 5px solid var(--color-secondary);
   @include media-breakpoint-down(lg) {
-    border: none;
+    // border: none;
   }
 }
 .helps-detail__wrap {
